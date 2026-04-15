@@ -1,101 +1,113 @@
-#  Análisis y Predicción de Fallas Industriales
+# Industrial Failure Analysis and Prediction
 
-##  Descripción
+## Project Overview
 
-En este proyecto trabajé con datos históricos de mantenimiento industrial para entender cómo se comportan las fallas a lo largo del tiempo.
+This project focuses on analyzing historical industrial maintenance data to understand failure behavior and explore how data-driven insights can support better decision-making.
 
-La idea fue ir más allá de solo ver los datos: analizar patrones, clasificar los tipos de fallas y tratar de proyectar qué podría pasar en el corto plazo.
-
----
-
-##  Objetivo
-
-- Entender cómo se comportan las fallas  
-- Clasificar los diferentes tipos  
-- Encontrar patrones en los datos  
-- Tener una idea de cómo podrían comportarse en el futuro  
+The goal was not only to analyze the data, but also to apply machine learning techniques to identify patterns and explore future trends.
 
 ---
 
-##  Dataset
+## Objectives
 
-El dataset proviene de un entorno real de mantenimiento industrial.
-
-Por temas de confidencialidad, no se incluye en el repositorio, pero el análisis se puede seguir completamente desde el notebook.
-
----
-
-##  Análisis Exploratorio (EDA)
-
-Antes de modelar, me enfoqué en entender bien los datos:
-
-- revisé valores nulos  
-- analicé la distribución de las fallas  
-- exploré cómo cambian en el tiempo  
-
-### Algunas cosas interesantes:
-
-- hay un desbalance claro entre tipos de falla  
-- algunas categorías aparecen mucho más que otras  
-- el comportamiento en el tiempo es bastante estable  
+* Understand failure behavior over time
+* Classify different types of failures
+* Identify patterns in the data
+* Estimate how failures may behave in the near future
 
 ---
 
-##  Modelo de Clasificación
+## Dataset
 
-Para clasificar las fallas utilicé un modelo de **Random Forest**.
+The dataset comes from a real industrial maintenance environment.
 
-Lo elegí porque funciona bien con datos de este tipo y no requiere demasiados supuestos.
-
-El modelo logró una exactitud cercana al **60%**, lo cual es razonable teniendo en cuenta que es un problema multiclase (varios tipos de falla).
+Due to confidentiality reasons, it is not included in the repository. However, the full analysis can be followed in the notebook.
 
 ---
 
-##  Predicción
+## Exploratory Data Analysis (EDA)
 
-Después de clasificar, trabajé en proyectar el comportamiento de las fallas en el tiempo.
+Before modeling, an exploratory analysis was performed to better understand the data:
 
-El resultado es un archivo con:
+* Checked for missing values
+* Analyzed the distribution of failure types
+* Explored how failures evolve over time
 
-- una predicción principal  
-- un límite inferior (escenario más bajo)  
-- un límite superior (escenario más alto)  
+Key observations:
 
-Más que un número exacto, esto sirve como una guía de cómo podrían comportarse las fallas en los próximos días.
-
----
-
-##  ¿Qué aporta esto?
-
-Este tipo de análisis puede ayudar a:
-
-- entender mejor qué está pasando con los equipos  
-- anticiparse a ciertos comportamientos  
-- apoyar decisiones de mantenimiento  
-- pasar de reaccionar a planear  
+* There is a clear class imbalance between failure types
+* Some categories appear significantly more frequently than others
+* The behavior over time shows a relatively stable pattern
 
 ---
 
-##  Tecnologías utilizadas
+## Classification Model
 
-- Python  
-- Pandas  
-- NumPy  
-- Scikit-learn  
-- Matplotlib  
-- Jupyter / Google Colab  
+A Random Forest model was used to classify different types of failures.
 
----
+This model was chosen because it performs well with structured data and can capture non-linear relationships.
 
-##  Archivos del proyecto
+Results:
 
-- `analisis_prediccion_fallas_industriales.ipynb` → todo el análisis paso a paso  
-- `predicciones_30_dias_todos_los_modos_fallo.xlsx` → resultados de la predicción  
+The model achieved an accuracy of around 60% in a multi-class problem with imbalanced data, which is a reasonable baseline for this type of scenario.
 
 ---
 
-##  Conclusión
+## Time Series Prediction
 
-Este proyecto fue un primer acercamiento práctico a trabajar con datos reales, entenderlos y sacar conclusiones útiles.
+Prophet was used to forecast the future behavior of failures.
 
-Más allá del modelo, lo importante fue el proceso: explorar, cuestionar los datos y tratar de traducirlos en algo que tenga sentido para negocio.
+The model provides:
+
+* A main prediction
+* A lower bound (conservative scenario)
+* An upper bound (optimistic scenario)
+
+These predictions offer a general view of how failures might behave in the short term.
+
+---
+
+## Value of the Project
+
+This type of analysis can help:
+
+* Better understand equipment behavior
+* Identify recurring failure patterns
+* Anticipate potential issues
+* Support maintenance decision-making
+* Move from reactive to more predictive strategies
+
+---
+
+## Limitations
+
+* The dataset is not included due to confidentiality
+* Class imbalance affects model performance
+* No advanced hyperparameter tuning was performed
+
+---
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Prophet
+* Matplotlib
+* Jupyter Notebook / Google Colab
+
+---
+
+## Project Structure
+
+* `industrial_failure_analysis_ml.ipynb` → full step-by-step analysis
+* `predicciones_30_dias_todos_los_modos_fallo.xlsx` → prediction results
+
+---
+
+## Conclusion
+
+This project represents a practical first step into working with real-world data and applying machine learning techniques.
+
+Beyond the model itself, the most valuable part was the process of understanding the data, questioning it, and translating it into useful insights.
