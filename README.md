@@ -1,6 +1,6 @@
-# 📊 Análisis y Predicción de Fallas Industriales
+#  Análisis y Predicción de Fallas Industriales
 
-## 🚀 Descripción
+##  Descripción
 
 En este proyecto trabajé con datos históricos de mantenimiento industrial para entender cómo se comportan las fallas a lo largo del tiempo.
 
@@ -8,7 +8,7 @@ La idea fue ir más allá de solo ver los datos: analizar patrones, clasificar l
 
 ---
 
-## 🎯 Objetivo
+##  Objetivo
 
 - Entender cómo se comportan las fallas  
 - Clasificar los diferentes tipos  
@@ -17,7 +17,7 @@ La idea fue ir más allá de solo ver los datos: analizar patrones, clasificar l
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 El dataset proviene de un entorno real de mantenimiento industrial.
 
@@ -25,7 +25,7 @@ Por temas de confidencialidad, no se incluye en el repositorio, pero el análisi
 
 ---
 
-## 🔍 Análisis Exploratorio (EDA)
+##  Análisis Exploratorio (EDA)
 
 Antes de modelar, me enfoqué en entender bien los datos:
 
@@ -41,7 +41,7 @@ Antes de modelar, me enfoqué en entender bien los datos:
 
 ---
 
-## 🤖 Modelo de Clasificación
+##  Modelo de Clasificación
 
 Para clasificar las fallas utilicé un modelo de **Random Forest**.
 
@@ -51,7 +51,7 @@ El modelo logró una exactitud cercana al **60%**, lo cual es razonable teniendo
 
 ---
 
-## 🔮 Predicción
+##  Predicción
 
 Después de clasificar, trabajé en proyectar el comportamiento de las fallas en el tiempo.
 
@@ -65,7 +65,7 @@ Más que un número exacto, esto sirve como una guía de cómo podrían comporta
 
 ---
 
-## 🏢 ¿Qué aporta esto?
+##  ¿Qué aporta esto?
 
 Este tipo de análisis puede ayudar a:
 
@@ -76,7 +76,7 @@ Este tipo de análisis puede ayudar a:
 
 ---
 
-## 🛠 Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - Python  
 - Pandas  
@@ -87,14 +87,14 @@ Este tipo de análisis puede ayudar a:
 
 ---
 
-## 📌 Archivos del proyecto
+##  Archivos del proyecto
 
 - `analisis_prediccion_fallas_industriales.ipynb` → todo el análisis paso a paso  
 - `predicciones_30_dias_todos_los_modos_fallo.xlsx` → resultados de la predicción  
 
 ---
 
-## ⭐ Conclusión
+##  Conclusión
 
 Este proyecto fue un primer acercamiento práctico a trabajar con datos reales, entenderlos y sacar conclusiones útiles.
 
