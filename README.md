@@ -2,72 +2,100 @@
 
 ## 🚀 Descripción
 
-Este proyecto explora datos históricos de mantenimiento para identificar patrones en fallas industriales y analizar su comportamiento en el tiempo.
+En este proyecto trabajé con datos históricos de mantenimiento industrial para entender cómo se comportan las fallas a lo largo del tiempo.
 
-Se aplicaron técnicas de análisis de datos y modelos de machine learning para comprender mejor la información y generar predicciones.
+La idea fue ir más allá de solo ver los datos: analizar patrones, clasificar los tipos de fallas y tratar de proyectar qué podría pasar en el corto plazo.
 
 ---
 
 ## 🎯 Objetivo
 
-- Analizar el comportamiento de fallas
-- Clasificar tipos de fallas
-- Identificar patrones en los datos
-- Explorar el comportamiento futuro
+- Entender cómo se comportan las fallas  
+- Clasificar los diferentes tipos  
+- Encontrar patrones en los datos  
+- Tener una idea de cómo podrían comportarse en el futuro  
 
 ---
 
 ## 📂 Dataset
 
-El dataset corresponde a datos reales de mantenimiento industrial.
+El dataset proviene de un entorno real de mantenimiento industrial.
 
-Por motivos de confidencialidad, no se incluye en este repositorio.
-
----
-
-## 🔍 Análisis
-
-Se realizó:
-
-- limpieza de datos  
-- análisis exploratorio (EDA)  
-- identificación de patrones  
+Por temas de confidencialidad, no se incluye en el repositorio, pero el análisis se puede seguir completamente desde el notebook.
 
 ---
 
-## 🤖 Modelo
+## 🔍 Análisis Exploratorio (EDA)
 
-Se trabajó con modelos de clasificación para identificar tipos de fallas y analizar su comportamiento.
+Antes de modelar, me enfoqué en entender bien los datos:
+
+- revisé valores nulos  
+- analicé la distribución de las fallas  
+- exploré cómo cambian en el tiempo  
+
+### Algunas cosas interesantes:
+
+- hay un desbalance claro entre tipos de falla  
+- algunas categorías aparecen mucho más que otras  
+- el comportamiento en el tiempo es bastante estable  
+
+---
+
+## 🤖 Modelo de Clasificación
+
+Para clasificar las fallas utilicé un modelo de **Random Forest**.
+
+Lo elegí porque funciona bien con datos de este tipo y no requiere demasiados supuestos.
+
+El modelo logró una exactitud cercana al **60%**, lo cual es razonable teniendo en cuenta que es un problema multiclase (varios tipos de falla).
 
 ---
 
 ## 🔮 Predicción
 
-Se realizó un análisis temporal para proyectar el comportamiento futuro de las fallas.
+Después de clasificar, trabajé en proyectar el comportamiento de las fallas en el tiempo.
+
+El resultado es un archivo con:
+
+- una predicción principal  
+- un límite inferior (escenario más bajo)  
+- un límite superior (escenario más alto)  
+
+Más que un número exacto, esto sirve como una guía de cómo podrían comportarse las fallas en los próximos días.
 
 ---
 
-## 🏢 Valor
+## 🏢 ¿Qué aporta esto?
 
-Este proyecto permite:
+Este tipo de análisis puede ayudar a:
 
-- entender mejor los datos  
-- apoyar la toma de decisiones  
-- anticipar comportamientos  
+- entender mejor qué está pasando con los equipos  
+- anticiparse a ciertos comportamientos  
+- apoyar decisiones de mantenimiento  
+- pasar de reaccionar a planear  
 
 ---
 
-## 🛠 Tecnologías
+## 🛠 Tecnologías utilizadas
 
 - Python  
 - Pandas  
+- NumPy  
 - Scikit-learn  
-- Jupyter / Colab  
+- Matplotlib  
+- Jupyter / Google Colab  
 
 ---
 
-## 👩‍💻 Autores
+## 📌 Archivos del proyecto
 
-- Yahira  
-- Emmanuel  
-- Alejandro  
+- `analisis_prediccion_fallas_industriales.ipynb` → todo el análisis paso a paso  
+- `predicciones_30_dias_todos_los_modos_fallo.xlsx` → resultados de la predicción  
+
+---
+
+## ⭐ Conclusión
+
+Este proyecto fue un primer acercamiento práctico a trabajar con datos reales, entenderlos y sacar conclusiones útiles.
+
+Más allá del modelo, lo importante fue el proceso: explorar, cuestionar los datos y tratar de traducirlos en algo que tenga sentido para negocio.
